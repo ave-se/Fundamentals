@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>90s Website</title>
+</head>
+<body>
+    <style>
+     nav#menu ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    position: fixed;
+    text-align: center;
+    top: 0px;
+    bottom: 0px;
+    background-color: rgb(101, 48, 122);
+    background-image: url(/Gifs/background3.gif);
+    border: rgb(176, 225, 248) 10px solid;
+    width: 190px;
+    padding: 20px; 
+}   
+
+nav#menu h1 {
+    font-size: 28px;
+    padding-top: 55px;
+    color: lawngreen;
+    z-index: 2;
+    font-family: 'Satisfy', cursive;
+}
+
+nav#menu img {
+    height: 70px;
+    padding-top: 90px;
+    z-index: 2;
+    
+}
+
+    </style>
+    <nav id="menu"> 
+    <ul>
+    <li><a href="Index.html">Enter</a></li>
+    <li><a href="home.html">Home</a></li>
+    <li><a href="action.html">Action</a></li>
+    <li><a href="comedy.html">Comedy</a></li>
+    <li><a href="fantasy.html">Fantasy</a></li>
+    <li><a href="horror.html">Horror</a></li>
+    <li><a href="mystery.html">Mystery</a></li>
+    <li><a href="romance.html">Romance</a></li>
+    <li><a href="western.html">Western</a></li>
+    <h1>Sound warning<br>Click to play</h1>
+    <img src="images.css/GroundedColorlessGoldfinch-size_restricted.gif">
+</ul>
+    </nav>
+
+      <div class="audio">
+        <h1>Sound warning</h1>
+    </div>    
+    
+    <audio id="music" controls="controls">
+        <source src="songs/fantasy.mp3" type="audio/mpeg">
+        <source src="songs/fantasy.ogg" type="audio/ogg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <div class="side">
+        <img src="gifs/watching5.gif">
+        <img src="gifs/watching7.gif">
+        <img src="gifs/watching8.gif">
+    </div>
+</body>
+</html>

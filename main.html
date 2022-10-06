@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+</head>
+<body>
+  <style>
+    
+    * {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  padding-top: 50px;
+}
+
+.background-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  object-fit: cover;
+  border: 4px solid rgb(228, 58, 86);
+}
+
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: pink;
+  height: 50px;
+  padding: 0.5rem;
+}
+
+.site-header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.site-header__container 
+{
+position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0 auto;
+  background-color: pink;
+  padding: 0.3rem;
+border: 4px solid rgb(228, 58, 86);
+}
+
+.site-header__toggle {
+  background-color: white;
+  padding:5px;
+  margin-right: 0.5rem;
+  border: 2px solid rgb(228, 58, 86)
+}
+
+
+.site-logo{
+  border: 2px solid rgb(228, 58, 86);
+  background-color: gray;
+  padding: 10px;
+  font-weight: 800;
+  text-align: center;
+  color: white;
+
+}
+.site-header__nav__menu {
+  list-style: none;
+  display: flex;
+  margin-left: 8px ;
+}
+
+.nav-search-button {
+border: 2px solid rgb(228, 58, 86);
+width: 100%;
+}
+
+.site-header__search-container {
+  display: none;
+}
+
+.site-header__search-container--visible {
+  display: flex;
+}
+
+.site-header__container--hidden {
+  display: none;
+}
+
+.site-header__logo {
+  display: flex;
+  align-items: center;
+}
+
+.site-header__nav {
+  justify-content: space-between;
+}
+
+
+
+.site-header__nav__menu li {
+  margin-left: 0.5rem;
+}
+
+.site-header__nav__menu li a {
+  display: block;
+  padding: 0.5rem;
+  border: 2px solid rgb(228, 58, 86);
+  background-color: gray;
+  color: white;
+  text-decoration: none;
+}
+
+.site-header__nav__dropdown {
+  background-color: #ccc;
+  border: 1px solid #999;
+  list-style: none;
+  position: absolute;
+  top: 50px;
+  right: 0;
+  display: none;
+}
+
+.site-header__nav__dropdown--active {
+  display: block;
+}
+
+.site-header__nav__dropdown li a {
+  display: block;
+  padding: 0.5rem;
+  text-align: center;
+  text-decoration: none;
+  background-color:rgb(255, 145, 0);
+  color: #000;
+  border: 2px solid rgb(228, 58, 86);
+}
+
+.site-header__nav__dropdown li a:hover {
+  background-color:pink;
+
+  
+}
+
+.aside  {
+  position: fixed;
+  top: 60px;
+  bottom: 0;
+  left: 0;
+  width: 200px;
+  background-color:pink;
+  transform: translateX(-100%);
+  transition: transform 0.5s;
+  border: 4px solid rgb(228, 58, 86);
+  box-shadow: 1px 1px 3px pink;
+  text-align: center;
+}
+hr {
+  
+  padding: 1px;
+}
+
+.aside--active {display: flex;
+  transform: translateX(0);
+  overflow: auto;
+}
+
+.aside__menu {
+  list-style: none;
+}
+
+
+.aside__menu li a {
+  display: block;
+  padding: 1rem;
+  margin: 0.5rem;
+  text-align: center;
+  border: 4px outset rgb(228, 58, 86);
+  background-image: url(images.css/stars-sparkles.gif);
+  color: #000;
+  text-decoration: none;
+}
+
+.aside__menu li a:hover {
+  border-style: inset;
+}
+
+.audio-text h1 {
+    font-size: 28px;
+    padding-top: 55px;
+    z-index: 2;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.multicolortext {
+        background-image: linear-gradient(to left, violet, indigo, green, blue, brown, orange, red);
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        background-clip: text;
+        color: transparent;
+      }
+
+audio#aside-music {
+  display: block;
+  padding: 9px;
+  width: 100%;
+}
+
+aside#aside img {
+   height: 70px;
+    padding: 9px;
+    z-index: 2;
+    width: 100%;
+}
+
+
+
+
+.main-content{
+    display: flex;
+}
+
+.main-content__item {
+    width: 50%;
+    padding: 0 0.5rem;
+}
+
+.video {
+   padding: 1rem;
+    margin: 1rem 0;
+    background-color: #aaa;
+    border-radius: 0.5rem;
+
+}
+
+.video {
+    padding: 1px;
+    margin: 1rem 0;
+    background-color: #aaa;
+    border-radius: 0.5rem;
+}
+
+
+
+.footer 
+{
+  position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: plum;
+   color: black;
+   text-align: center;
+   border: 2px solid rgb(228, 58, 86);
+   padding: 0.6rem;
+}
+
+
+  
+
+@media screen and (max-width: 667px) {
+  #navAccountButton{
+  display: none;
+  }
+.aside--active {display: flex;
+    transform: translateX(0);} 
+  }
+
+@media screen and (min-width: 550px) {
+  
+  .main-content__item {
+    width: 50%;
+  }
+
+}
+
+@media screen and (min-width: 800px) {
+  
+
+  .main-content {
+    margin-left: 100px;
+  }
+
+  .main-content__item {
+    width: 25%;}}
+
+  </style>
+  
+     <img
+      class="background-video"
+      src="images.css/sunset.gif"
+      autoplay
+      muted
+      loop
+    ></img>
+
+    <header class="site-header">
+          <div class="site-header__search-container" id="navSearchContainer">
+        <form class="site-header__search">
+          <input type="text" />
+          <button>Search</button>
+          <button id="" type="button" onclick="javascript:window.close()">X</button>
+        </form>
+      </div>  
+      
+       <div class="site-header__container" id="navContainer">
+       <div class="site-header__logo">  
+            <button class="site-header__toggle" id="navToggleButton">
+           <span class="material-symbols-outlined">
+menu 
+</span></button> </div>
+
+ <div class="site-logo">
+    RETRO  
+        </div>
+       
+<nav class="site-header__nav"> 
+          <ul class="site-header__nav__menu"> 
+             <button class="nav-search-button" id="navSearchButton"><span class="material-symbols-outlined">
+search
+</span></button>
+<li>
+              <a href="signin.html" aria-label="login">login</a></li>
+            <li>
+              <a 
+              href="#" aria-label="more" id="navAccountButton">more</a>
+            </li>
+          </ul>
+          <ul class="site-header__nav__dropdown" id="navAccountDropdown">
+            <li><a href="index.html">back to the future?</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+
+<aside class="aside" id="aside" >
+      <nav>
+        <ul class="aside__menu">
+          <li><a href="#">FASHION</a></li>
+          <hr>
+            <li><a href="#">CULTURE</a></li>
+            <hr>
+            <li><a href="#">MUSIC</a></li>
+            <hr>
+            <li> <a href="#">ART</a></li>
+            <hr>
+        <div class="audio-text">
+        <h1> <span class = "multicolortext">LET THERE BE SOUND!</span></h1>
+        <hr>
+    </div>
+           <audio id ="aside-music" src="audio.css/90-s-nation_basket-case.mp3" controls> </audio>
+           <hr>
+           
+            <img src="images.css/GroundedColorlessGoldfinch-size_restricted.gif" alt=""> 
+          </ul>
+            </nav>  
+        </aside>
+   
+      <div class="main-content">
+        <div class="main-content__item">
+          <article class="video">
+            <img src="images.css/abstract.jpeg" alt=""> 
+            
+          </article>
+        </div>
+        <hr>
+        <div><h2>fashion gist</h2>
+            <p>description  <a href="#">read more</a></p>
+</div>
+
+
+     
+
+
+          <footer>
+            <div class="footer">
+            <p>&copy; Coded by Agnes-Cybil Atsuah (Avese),
+    <br> HYPER ISLAND 2022 
+            </p> 
+          </footer>
+          
+          <script>
+
+function windowClose()
+{
+var newwindow= window.open('', '', 'width=300, height=300');
+newwindow.document.write("<button onclick='window.close()'></button>");
+}
+
+
+
+         function toggleNav() {
+    let aside = document.getElementById('aside');
+    aside.classList.toggle('aside--active');
+}
+
+let button = document.getElementById('navToggleButton');
+button.addEventListener('click', toggleNav);
+
+function toggleSearch() {
+    let searchContainer = document.getElementById('navSearchContainer');
+    searchContainer.classList.toggle('site-header__search-container--visible');
+
+    let container = document.getElementById('navContainer');
+    container.classList.toggle('site-header__container--hidden');
+}
+
+let searchButton = document.getElementById('navSearchButton');
+searchButton.addEventListener('click', toggleSearch);
+
+function toggleDropdown() {
+    let dropdown = document.getElementById('navAccountDropdown');
+    dropdown.classList.toggle('site-header__nav__dropdown--active');
+}
+
+let accountButton = document.getElementById('navAccountButton');
+accountButton.addEventListener('click', toggleDropdown); 
+          </script>
+</body>
+</html>

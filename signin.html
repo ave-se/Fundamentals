@@ -160,6 +160,11 @@ button:hover {
   justify-content: space-around;
 }
 
+.submit-success, .submit-error {
+    display: none;
+}
+
+
 @media screen and (max-width: 667px)
  {
   h2 {display: none;}
@@ -181,7 +186,11 @@ button:hover {
 <div class="overlay-text">
     <h2> Sign in to your account
     </h2> <hr>
-<form action="action_page.php">
+<form id="contactForm" name="contact" 
+method="POST" 
+data-netlify="true"
+data-netlify-recaptcha="true">
+
     
     <input type="text" placeholder="Enter Email" name="email" required>
 
@@ -198,11 +207,18 @@ button:hover {
     <div class="clearfix">
       <button type="button" class="cancelbtn">Cancel</button>
       <button type="submit" class="signupbtn">SignUp</button>
-   </form>
+   
+   <div class="submit-success"><p>Message sent!🎉</p></div>
+<div class="submit-error"><p>Error.</p></div>
+
+    </form>
   </div> 
 </div>
 </div>
   </div>
+  <script>
+
+  </script>
 </body>
 </html>
 

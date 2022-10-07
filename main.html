@@ -6,6 +6,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Paytone+One&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital@1&display=swap" rel="stylesheet">
 </head>
 <body>
   <style>
@@ -20,6 +26,7 @@ body {
   padding-top: 50px;
 }
 
+
 .background-video {
   position: fixed;
   top: 0;
@@ -29,6 +36,8 @@ body {
   z-index: -1;
   object-fit: cover;
   border: 4px solid rgb(228, 58, 86);
+  padding: 3rem;
+  background-image: url(images.css/stars-sparkles.gif);
 }
 
 .site-header {
@@ -36,7 +45,6 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  background-color: pink;
   height: 50px;
   padding: 0.5rem;
 }
@@ -54,27 +62,27 @@ position: fixed;
   left: 0;
   width: 100%;
   height: 0 auto;
-  background-color: pink;
+background-image: url(images.css/stars-sparkles.gif);
   padding: 0.3rem;
 border: 4px solid rgb(228, 58, 86);
 }
 
 .site-header__toggle {
-  background-color: white;
+  background-color: pink;
   padding:5px;
   margin-right: 0.5rem;
-  border: 2px solid rgb(228, 58, 86)
+  border: 4px solid rgb(228, 58, 86)
 }
 
 
 .site-logo{
-  border: 2px solid rgb(228, 58, 86);
-  background-color: gray;
+  border: 4px solid rgb(228, 58, 86);
+  background-color:pink;
   padding: 10px;
-  font-weight: 800;
+  font-size:24px;
   text-align: center;
-  color: white;
-
+  color: black;
+font-family: 'Paytone One', sans-serif;
 }
 .site-header__nav__menu {
   list-style: none;
@@ -85,6 +93,7 @@ border: 4px solid rgb(228, 58, 86);
 .nav-search-button {
 border: 2px solid rgb(228, 58, 86);
 width: 100%;
+padding: 6px;
 }
 
 .site-header__search-container {
@@ -121,6 +130,7 @@ width: 100%;
   background-color: gray;
   color: white;
   text-decoration: none;
+  font-family: 'EB Garamond', serif;
 }
 
 .site-header__nav__dropdown {
@@ -223,34 +233,74 @@ aside#aside img {
     width: 100%;
 }
 
-
-
-
-.main-content{
-    display: flex;
+.main-container {
+  padding: 2rem;
 }
 
-.main-content__item {
-    width: 50%;
-    padding: 0 0.5rem;
+.content-item {
+  padding : 1rem;
 }
 
-.video {
-   padding: 1rem;
-    margin: 1rem 0;
-    background-color: #aaa;
-    border-radius: 0.5rem;
-
+.content-title a {
+  color: #000;
+}
+.content-title a:hover {
+color: dodgerblue;
 }
 
-.video {
-    padding: 1px;
-    margin: 1rem 0;
-    background-color: #aaa;
-    border-radius: 0.5rem;
+.content {
+  background-color:pink;
+  padding: 1rem;
+  border:4px outset rgb(228, 58, 86);
+  transition: all 0.2s;
 }
 
+.content:hover {
+ transform: translate(-10px, -10px);
+  box-shadow: 10px 10px #c54174fa; 
+}
 
+.content img {
+  max-width: 100%;
+}
+
+.video__thumbnail {
+  width: 100%;
+  height: auto;
+}
+
+.main-video {
+padding: 1rem;
+transition: all 0.2s;
+}
+
+.main-video:hover video {
+transform: translate(-10px, -10px);
+  box-shadow: 10px 10px #c54174fa; 
+}
+
+.main-video video{
+    background-color:pink;
+  padding: 1rem;
+  border:4px outset rgb(228, 58, 86);
+  transition: all 0.2s;
+  width: 60%;
+  height: 40%;
+ }
+ 
+.video-title {
+  color: #000;
+  border: 4px outset rgb(228, 58, 86);
+  background-color: pink;
+  padding: 1rem;
+  text-align: center;
+  width: 60%;
+  margin-left: 21%;
+}
+
+.video-title p:hover {
+color: dodgerblue;
+}
 
 .footer 
 {
@@ -266,34 +316,52 @@ aside#aside img {
 }
 
 
-  
-
 @media screen and (max-width: 667px) {
-  #navAccountButton{
+  #navAccountButton, #signIn {
   display: none;
   }
 .aside--active {display: flex;
     transform: translateX(0);} 
+
+    .content-title
+{
+  display: none;
+  width: 0 a;
+}
+
+.main-video video {display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+ margin-left: 21%;
+ width: 100%;
+ margin: 0 auto;
+
+ }
   }
 
 @media screen and (min-width: 550px) {
-  
-  .main-content__item {
-    width: 50%;
+  .main-container {
+   display: flex;
+    flex-wrap: wrap; 
   }
-
+  
+  .content-item {width:50% ;}
 }
 
 @media screen and (min-width: 800px) {
-  
+  .content-item {margin-left: 4%;
+width: 20%;
+display: flex;
+flex-wrap: wrap;
 
-  .main-content {
-    margin-left: 100px;
   }
-
-  .main-content__item {
-    width: 25%;}}
-
+.main-video video {display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+ margin-left: 21%;
+ margin-bottom: 4%;}
+ 
+}
   </style>
   
      <img
@@ -330,7 +398,7 @@ menu
 search
 </span></button>
 <li>
-              <a href="signin.html" aria-label="login">login</a></li>
+              <a href="signin.html" id="signIn" aria-label="login">login</a></li>
             <li>
               <a 
               href="#" aria-label="more" id="navAccountButton">more</a>
@@ -366,18 +434,75 @@ search
           </ul>
             </nav>  
         </aside>
+
+
+
    
-      <div class="main-content">
-        <div class="main-content__item">
-          <article class="video">
-            <img src="images.css/abstract.jpeg" alt=""> 
-            
-          </article>
-        </div>
-        <hr>
-        <div><h2>fashion gist</h2>
-            <p>description  <a href="#">read more</a></p>
+
+  <main class="main-container">
+  <div class="content-item">
+    <article class="content">
+  <img src="images.css/" alt="" class="video__thumbnail">
+    <h3 class="content-title">
+      <a href="#">
+        A quick look into the dizzingly chaotic fashion cluster fudge that was trending during the mid 90s
+      </a>
+    </h3>
+  </div>
+</article>
 </div>
+
+
+
+  <div class="content-item">
+    <article class="content">
+      <img src="images.css/people-20-years-ago-thinking-about-y2k-67461296.png" alt="" class="video__thumbnail">
+    <h3 class="content-title">
+      <a href="#">
+       This one is for all the babies born because their parents thought the world would end in 2000...
+      </a>
+    </h3>
+  </div> 
+</article>
+</div>
+
+  <div class="content-item">
+    <article class="content">
+  <img src="images.css/90squiz.jpg" alt="" class="video__thumbnail">
+    <h3 class="content-title">
+      <a href="#">
+        Test how much of a 90s baby you are with this quiz I compiled from the forgotten recess of retro internet...
+      </a>
+    </h3>
+</div>
+</article>
+</div>
+
+
+   <div class="content-item">
+     <article class="content">
+  <img src="images.css/original (1).gif"
+   alt="" class="video__thumbnail">
+    <h3 class="content-title">
+      <a href="#">
+     All the cartoons that shaped us 
+      </a>
+    </h3>
+ </div>
+</article>
+</div>
+  </main>
+
+
+<div class="main-video">
+     <div class="video-title">
+     <h1>Want to party like it's 1999?</h1>
+     <p>watch this video!</p>
+    </div>
+     <article class="video-content">
+      <video src="videos.css/dancing.mp4" controls muted loop aria-label="dancing girl"></video></article>
+</div>
+
 
 
      
@@ -388,6 +513,7 @@ search
             <p>&copy; Coded by Agnes-Cybil Atsuah (Avese),
     <br> HYPER ISLAND 2022 
             </p> 
+           
           </footer>
           
           <script>

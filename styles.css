@@ -1,0 +1,62 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  padding-top: 50px;
+}
+
+.background-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  object-fit: cover;
+  overflow: hidden;
+}
+
+.overlay-text {
+  margin: auto;
+  margin-top: 15%;
+  width: 50%;
+  border: 1px solid;
+  padding: 70px 0;
+  text-align: center;
+  line-height: 24px;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.overlay-text h1 {
+  font-family: "DM Serif Display", serif;
+  color: chocolate;
+  font-size: 2em;
+}
+
+.overlay-text a {
+  font-family: "Chela One", cursive;
+  font-size: 26px;
+  font-weight: lighter;
+  text-decoration: none;
+  animation: blinking 3s infinite;
+}
+@keyframes blinking {
+  18% {
+    color: chocolate;
+  }
+  47% {
+    color: deeppink;
+  }
+  62% {
+    color: darkmagenta;
+  }
+  97% {
+    color: transparent;
+  }
+  100% {
+    color: #000;
+  }
+}
